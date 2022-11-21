@@ -17,6 +17,7 @@ import "./Form.scss";
 import { Lang, Mime } from "../../types/utilsTypes";
 import { getLangSign, getWordAmount, getDocType } from "../../utils/utils";
 import { getDeadline } from "../../functions/deadline";
+import { isValid } from "../../utils/utils";
 
 export const Form = () => {
   let isNotCompleteOrder = true;
@@ -52,7 +53,13 @@ export const Form = () => {
       timeZone: "UTC",
     });
   }
-  if (language && resultCost && name && email && service) {
+  if (
+    language &&
+    resultCost &&
+    isValid(name, "name") &&
+    isValid(email, "email") &&
+    service
+  ) {
     isNotCompleteOrder = false;
   }
   const completeOrder = () => {
@@ -61,6 +68,7 @@ export const Form = () => {
     sessionStorage.setItem("price", String(resultCost));
     sessionStorage.setItem("email", email);
     sessionStorage.setItem("deadline", deadlineFormatted);
+
     window.location.replace("/make-order"); //не работает redirect from "react-router-dom"
   };
 
@@ -81,18 +89,21 @@ export const Form = () => {
             changeHandler={setEmail}
             type={"email"}
             label={email}
+            isCorrect={isValid(email, "email")}
           />
           <InputField
             staticLabel={"Комментар або покликання"}
             changeHandler={setComment}
             type={"text"}
             label={comment}
+            isCorrect={true}
           />
           <InputField
             staticLabel={"Ваше ім'я"}
             changeHandler={setName}
             type={"text"}
             label={name}
+            isCorrect={isValid(name, "name")}
           />
           {!service && (
             <Dropdown

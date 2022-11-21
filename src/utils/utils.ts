@@ -46,3 +46,19 @@ export const getDocType = (text: string): Mime =>{
   }
   return 'other';
 }
+
+export const isValid = (str:string, pattern: string): boolean => {
+  if(!str || !pattern){
+    return true;
+  }
+  let regexp: RegExp ;
+  if(pattern === 'name'){
+    regexp = new RegExp(/^[A-Za-zА-Яа-я]{2,}$/);
+  }else if(pattern === 'email'){
+    regexp = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+  }else{
+    return false;
+  }
+  const matched = str.match(regexp);
+  return !!matched;
+}

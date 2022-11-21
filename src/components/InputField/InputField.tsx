@@ -6,11 +6,13 @@ export const InputField = ({
   label,
   type,
   changeHandler,
+  isCorrect,
 }: InputFieldProps) => {
   return (
     <div className="inputField">
       <label>
         <input
+          className={isCorrect ? "good" : "failed"}
           onChange={(e) => changeHandler(e.target.value)}
           placeholder={staticLabel}
           type={type}

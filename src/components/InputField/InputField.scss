@@ -35,4 +35,7 @@
   input:focus + .active {
     color: $theme_color_light;
   }
+  .failed {
+    border: 1px solid red;
+  }
 }

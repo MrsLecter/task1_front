@@ -3,4 +3,5 @@ export type InputFieldProps = {
   label: string;
   type: "text" | "email";
   changeHandler: Function;
+  isCorrect: boolean
 };
