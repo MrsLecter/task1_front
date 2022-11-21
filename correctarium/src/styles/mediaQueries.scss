@@ -1,0 +1,244 @@
+/* breakpoints */
+$breackpoint_mobile_460: 460px;
+$breackpoint_small_750: 750px;
+$breackpoint_medium_768: 768px;
+$breackpoint_large_1110: 1110px;
+$breackpoint_greather_1278: 1278px;
+/* /breakpoints */
+
+/* Footer */
+@media (min-width: $breackpoint_medium_768) {
+  .footer {
+    flex-direction: row;
+    padding: 20px 0px;
+
+    &__siteInfo {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: $breackpoint_medium_768) {
+  .footer {
+    min-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 15px 40px;
+
+    &__logo {
+      order: -1;
+    }
+
+    &__feedback {
+      margin: 42px auto 40px auto;
+    }
+
+    &__siteInfo {
+      order: 1;
+      text-align: center;
+    }
+  }
+}
+/* /Footer */
+
+/* Header */
+@media (max-width: $breackpoint_large_1110) {
+  .header {
+    width: 87.143vw;
+  }
+}
+
+@media (min-width: $breackpoint_medium_768) {
+  .header {
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+@media (max-width: $breackpoint_medium_768) {
+  .header {
+    min-width: 93.872vw;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+/* /Header */
+
+/* SubmitButton */
+@media (min-width: $breackpoint_medium_768) and (max-width: $breackpoint_medium_768) {
+  .submitButton {
+    width: 500px;
+  }
+}
+@media (max-width: $breackpoint_mobile_460) {
+  .submitButton {
+    width: 429px;
+  }
+}
+/* /SubmitButton */
+
+/* wrapperHome */
+@media (min-width: $breackpoint_greather_1278) {
+  .wrapperHome {
+    min-width: 1170px;
+  }
+}
+@media (max-width: $breackpoint_greather_1278) {
+  .wrapperHome {
+    min-width: 95%;
+  }
+}
+
+@media (max-width: $breackpoint_medium_768) {
+  .wrapperHome {
+    min-width: 95%;
+  }
+}
+/* /wrapperHome */
+
+/* Form */
+@media (min-width: $breackpoint_large_1110) {
+  .form {
+    height: 635px;
+    &__contentBlock {
+      width: 75%;
+    }
+
+    &__outputBlock {
+      width: 25%;
+      flex-direction: column;
+      align-items: flex-end;
+      button {
+        margin-top: 4.5vh;
+        width: 260px;
+        height: 55px;
+      }
+    }
+    .form {
+      &__inputBlock {
+        position: relative;
+        flex-direction: row;
+
+        & > div:nth-child(1) {
+          margin-right: 30px;
+        }
+        & > div:nth-child(2) {
+          position: absolute;
+          top: 100px;
+        }
+        & > div:nth-child(4) {
+          position: absolute;
+          top: 100px;
+          left: 375px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breackpoint_large_1110) {
+  .form {
+    margin-bottom: 76px;
+    &__contentBlock {
+      width: 70%;
+    }
+
+    &__outputBlock {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 33%;
+      .priceDisplay {
+        display: flex;
+        justify-content: flex-end;
+      }
+      button {
+        margin-top: 6.8vh;
+        width: 100%;
+        height: 55px;
+      }
+    }
+
+    &__inputBlock {
+      flex-direction: column;
+      & > div {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+@media (max-width: $breackpoint_medium_768) {
+  .form {
+    flex-direction: column;
+    &__contentBlock > div {
+      margin-bottom: 50px;
+    }
+
+    &__inputBlock {
+      height: 200px;
+      position: relative;
+      flex-direction: row;
+      & > div:nth-child(1) {
+        margin-right: 30px;
+      }
+      & > div:nth-child(2) {
+        position: absolute;
+        top: 100px;
+      }
+      & > div:nth-child(4) {
+        position: absolute;
+        top: 100px;
+        left: 375px;
+      }
+    }
+    &__contentBlock {
+      width: 100%;
+    }
+    &__outputBlock {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: $breackpoint_small_750) {
+  .form {
+    &__contentBlock {
+      width: 100%;
+    }
+    &__outputBlock {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__inputBlock {
+      width: 100%;
+      height: 500px;
+      position: static;
+      flex-direction: column;
+      & > div:nth-child(1) {
+        margin-right: 30px;
+      }
+      & > div:nth-child(2) {
+        position: static;
+        margin-top: 20px;
+      }
+      & > div:nth-child(3) {
+        position: static;
+        margin-top: 20px;
+      }
+      & > div:nth-child(4) {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+/* /Form */

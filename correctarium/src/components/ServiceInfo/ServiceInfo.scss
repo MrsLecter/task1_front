@@ -1,0 +1,17 @@
+@import "../../styles/variable.scss";
+
+.serviceInfo {
+  margin-top: 1.25rem;
+  margin-bottom: 3.062rem;
+  line-height: 1.5;
+  color: $theme_color_dark;
+
+  span {
+    color: $theme_color_dark;
+    font-weight: 800;
+  }
+
+  &__results {
+    margin-bottom: 1.875rem;
+  }
+}

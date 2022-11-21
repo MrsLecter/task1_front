@@ -1,0 +1,61 @@
+@import "../../styles/variable.scss";
+
+.dropdown {
+  position: relative;
+  font-size: 0.8rem;
+  width: 345px;
+  cursor: pointer;
+  color: $theme_color_text_light;
+
+  &__button {
+    padding: 1.37rem 1.562rem;
+    border: 1px solid $theme_color_border_light;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 12px;
+      height: 12px;
+      margin-right: -8px;
+    }
+  }
+  &__label {
+    position: absolute;
+    color: $theme_color_text_light;
+    background-color: white;
+    top: -7px;
+    left: 37px;
+    z-index: 1;
+  }
+
+  &__button.active {
+    border: 1px solid $theme_color_light;
+  }
+
+  &__button.active + &__label {
+    display: block;
+  }
+
+  &__content {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    padding: 15px;
+    color: $theme_color_dark;
+    box-shadow: 0 15px 66px #0000000a;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 2;
+  }
+  &__item {
+    padding: 10px;
+    transition: all 0.2s;
+  }
+
+  &__item:hover {
+    background-color: #eeeeee;
+  }
+}

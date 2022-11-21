@@ -1,0 +1,58 @@
+@import "../../styles/variable.scss";
+
+.textField {
+  position: relative;
+  textarea {
+    box-sizing: border-box;
+    min-width: 320px;
+    // width: 41.25rem;
+    width: 77%;
+    height: 200px;
+    font-size: 0.875rem;
+    resize: none;
+    border: 1px solid $theme_color_border_light;
+    border-radius: 6px;
+    padding: 1.3rem 2rem;
+    background-color: white;
+  }
+  textarea:focus {
+    border: 1px solid $theme_color_light;
+  }
+
+  .hidden {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    position: absolute;
+    display: none;
+    top: 1.37rem;
+    left: 10.125rem;
+    font-size: 0.875rem;
+    border: none;
+    background-color: transparent;
+    color: $theme_color_light;
+  }
+
+  button.visible {
+    display: block;
+  }
+}
+
+.textField.blocked {
+  textarea {
+    background-color: #ebeaeb;
+  }
+  textarea::placeholder {
+    color: $theme_color_dark;
+  }
+  button {
+    top: 45%;
+    left: 35%;
+  }
+}

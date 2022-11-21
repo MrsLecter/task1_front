@@ -1,0 +1,38 @@
+@import "../../styles/variable.scss";
+
+.inputField {
+  position: relative;
+
+  input {
+    box-sizing: border-box;
+    color: $theme_color_text_light;
+    font-size: 0.875rem;
+    width: 345px;
+    padding: 1.3rem 1.36rem;
+    border: 1px solid $theme_color_border_light;
+    border-radius: 6px;
+  }
+  input:focus {
+    border: 1px solid $theme_color_light;
+  }
+  input,
+  input:focus {
+    color: $theme_color_dark;
+  }
+  div {
+    display: none;
+  }
+  .active {
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 24px;
+    background-color: white;
+    font-size: 0.75rem;
+    color: $theme_color_text_light;
+    z-index: 1;
+  }
+  input:focus + .active {
+    color: $theme_color_light;
+  }
+}

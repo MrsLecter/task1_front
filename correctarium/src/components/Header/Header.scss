@@ -1,0 +1,15 @@
+@import "../../styles/variable.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $theme_color_dark;
+  font-size: 1.875rem;
+  line-height: 1.5;
+  font-weight: 500;
+  img:hover {
+    cursor: pointer;
+  }
+}
