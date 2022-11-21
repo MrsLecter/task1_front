@@ -10,7 +10,6 @@ export const TextField = ({ text, setText }: TextFieldProps) => {
 
   let label = "Введіть текст або";
   let blocked = false;
-  console.log(file);
   if (file) {
     setText(file.name.split(".")[1]);
     label = `Файл ${file.name} завантажено!`;
