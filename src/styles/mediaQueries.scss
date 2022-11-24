@@ -1,13 +1,13 @@
 /* breakpoints */
 $breackpoint_mobile_460: 460px;
 $breackpoint_small_750: 750px;
-$breackpoint_medium_768: 768px;
+$breackpoint_medium_767: 767px;
 $breackpoint_large_1110: 1110px;
 $breackpoint_greather_1278: 1278px;
 /* /breakpoints */
 
 /* Footer */
-@media (min-width: $breackpoint_medium_768) {
+@media (min-width: $breackpoint_medium_767) {
   .footer {
     flex-direction: row;
     padding: 20px 0px;
@@ -18,7 +18,7 @@ $breackpoint_greather_1278: 1278px;
   }
 }
 
-@media (max-width: $breackpoint_medium_768) {
+@media (max-width: $breackpoint_medium_767) {
   .footer {
     min-width: 100%;
     flex-direction: column;
@@ -49,7 +49,7 @@ $breackpoint_greather_1278: 1278px;
   }
 }
 
-@media (min-width: $breackpoint_medium_768) {
+@media (min-width: $breackpoint_medium_767) {
   .header {
     img {
       width: 28px;
@@ -58,7 +58,7 @@ $breackpoint_greather_1278: 1278px;
   }
 }
 
-@media (max-width: $breackpoint_medium_768) {
+@media (max-width: $breackpoint_medium_767) {
   .header {
     min-width: 93.872vw;
     img {
@@ -68,10 +68,24 @@ $breackpoint_greather_1278: 1278px;
   }
 }
 
+@media (max-width: $breackpoint_small_750) {
+  .header {
+    min-width: 93.872vw;
+    position: relative;
+    img {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: -30px;
+      left: 90.8vw;
+    }
+  }
+}
+
 /* /Header */
 
 /* SubmitButton */
-@media (min-width: $breackpoint_medium_768) and (max-width: $breackpoint_medium_768) {
+@media (min-width: $breackpoint_medium_767) and (max-width: $breackpoint_medium_767) {
   .submitButton {
     width: 500px;
   }
@@ -86,20 +100,36 @@ $breackpoint_greather_1278: 1278px;
 /* wrapperHome */
 @media (min-width: $breackpoint_greather_1278) {
   .wrapperHome {
-    min-width: 60.9375vw;
+    min-width: 60.417vw;
   }
 }
 @media (max-width: $breackpoint_greather_1278) {
   .wrapperHome {
-    min-width: 60.9375vw;
+    min-width: 90.837vw;
+  }
+}
+@media (max-width: $breackpoint_large_1110) {
+  .wrapperHome {
+    min-width: 89.28vw;
   }
 }
 
-@media (max-width: $breackpoint_medium_768) {
+@media (max-width: $breackpoint_medium_767) {
   .wrapperHome {
     min-width: 93.872vw;
   }
 }
+@media (max-width: $breackpoint_small_750) {
+  .wrapperHome {
+    width: 95vw;
+  }
+}
+@media (max-width: $breackpoint_mobile_460) {
+  .wrapperHome {
+    width: 95vw;
+  }
+}
+
 /* /wrapperHome */
 
 /* Form */
@@ -114,7 +144,7 @@ $breackpoint_greather_1278: 1278px;
       flex-direction: column;
       align-items: flex-end;
       button {
-        margin-top: 4.5vh;
+        margin-top: 6.2vh;
         width: 260px;
         height: 55px;
       }
@@ -123,7 +153,7 @@ $breackpoint_greather_1278: 1278px;
       &__inputBlock {
         position: relative;
         flex-direction: row;
-        margin-bottom: 200px;
+        margin-bottom: 250px;
         & > div:nth-child(1) {
           margin-right: 30px;
         }
@@ -143,19 +173,20 @@ $breackpoint_greather_1278: 1278px;
 
 @media (max-width: $breackpoint_large_1110) {
   .form {
-    margin-bottom: 76px;
+    margin-bottom: 90px;
     &__contentBlock {
-      width: 70%;
+      width: 90%;
     }
 
     &__outputBlock {
       justify-content: flex-start;
       flex-direction: column;
       align-items: flex-end;
-      width: 33%;
+      width: 20%;
       .priceDisplay {
         display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
       }
       button {
         margin-top: 6.8vh;
@@ -166,13 +197,23 @@ $breackpoint_greather_1278: 1278px;
 
     &__inputBlock {
       flex-direction: column;
+      & > div:nth-child(1) {
+        order: -3;
+      }
+      & > div:nth-child(2) {
+        order: -1;
+      }
+      & > div:nth-child(3) {
+        order: -2;
+      }
+
       & > div {
         margin-bottom: 35px;
       }
     }
   }
 }
-@media (max-width: $breackpoint_medium_768) {
+@media (max-width: $breackpoint_medium_767) {
   .form {
     flex-direction: column;
     &__contentBlock > div {
@@ -180,9 +221,10 @@ $breackpoint_greather_1278: 1278px;
     }
 
     &__inputBlock {
-      height: 200px;
+      height: 315px;
       position: relative;
       flex-direction: row;
+
       & > div:nth-child(1) {
         margin-right: 30px;
       }
@@ -203,6 +245,17 @@ $breackpoint_greather_1278: 1278px;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      margin-bottom: 33px;
+      .priceDisplay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin-top: 6.8vh;
+        width: 100%;
+        height: 55px;
+      }
     }
   }
 }
@@ -213,13 +266,68 @@ $breackpoint_greather_1278: 1278px;
     }
     &__outputBlock {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-bottom: 33px;
+      .priceDisplay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin-top: 6.8vh;
+        width: 100%;
+        height: 55px;
+      }
     }
     &__inputBlock {
       width: 100%;
-      height: 500px;
+      height: 540px;
+      position: static;
+      flex-direction: column;
+      & > div:nth-child(1) {
+        margin-right: 30px;
+      }
+      & > div:nth-child(2) {
+        position: static;
+        margin-top: 20px;
+      }
+      & > div:nth-child(3) {
+        position: static;
+        margin-top: 20px;
+      }
+      & > div:nth-child(4) {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+    &__inputBlock:nth-child(3) {
+      .dropdown {
+        &__content {
+          top: 935px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $breackpoint_mobile_460) {
+  .form {
+    &__contentBlock {
+      width: 100%;
+    }
+    &__outputBlock {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 33px;
+      button {
+        margin-top: 6.8vh;
+        width: 100%;
+        height: 55px;
+      }
+    }
+    &__inputBlock {
+      width: 100%;
+      height: 540px;
       position: static;
       flex-direction: column;
       & > div:nth-child(1) {
